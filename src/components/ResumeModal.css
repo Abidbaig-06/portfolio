@@ -1,0 +1,311 @@
+.resume-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 16px;
+  overflow-y: auto;
+}
+
+.resume-modal-container {
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.resume-control-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.control-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resume-doc-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0284c7;
+  background: #e0f2fe;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.resume-doc-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.control-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Printable Paper Layout - Matching user's uploaded PDF resume */
+.resume-paper {
+  background: #ffffff;
+  color: #111827;
+  padding: 36px 44px 44px;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.45;
+  position: relative;
+}
+
+.resume-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #0284c7;
+}
+
+/* Header */
+.pdf-resume-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.pdf-name {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.pdf-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.pdf-contact-line,
+.pdf-links-line {
+  font-size: 0.84rem;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.pdf-sep {
+  color: #9ca3af;
+  margin: 0 2px;
+}
+
+.pdf-link {
+  color: #0284c7;
+  text-decoration: none;
+}
+
+.pdf-link:hover {
+  text-decoration: underline;
+}
+
+.pdf-photo-box {
+  width: 90px;
+  height: 110px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  flex-shrink: 0;
+}
+
+.pdf-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Section styling with blue background title strip */
+.pdf-section {
+  margin-bottom: 20px;
+}
+
+.pdf-section-title-bar {
+  background: #e0f2fe;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #0284c7;
+}
+
+.pdf-section-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pdf-summary-text {
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+/* Two-column layout */
+.pdf-two-col {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 32px;
+}
+
+.pdf-col-left,
+.pdf-col-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Entries */
+.pdf-entry {
+  margin-bottom: 14px;
+}
+
+.pdf-entry-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.pdf-regular {
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.pdf-entry-inst {
+  font-size: 0.84rem;
+  color: #374151;
+  margin-bottom: 2px;
+}
+
+.pdf-entry-score {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.pdf-entry-link {
+  font-size: 0.84rem;
+  margin-top: 4px;
+  color: #374151;
+}
+
+.pdf-bullets {
+  margin-left: 18px;
+  font-size: 0.84rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.pdf-bullets li {
+  margin-bottom: 3px;
+}
+
+/* Skills Right Column */
+.pdf-skill-block {
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.pdf-skill-category {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1px;
+}
+
+.pdf-skill-list {
+  color: #374151;
+}
+
+/* Links Right Column */
+.pdf-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.pdf-link-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-link-label {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.82rem;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .no-print {
+    display: none !important;
+  }
+  #printable-resume,
+  #printable-resume * {
+    visibility: visible;
+  }
+  #printable-resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .pdf-two-col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .resume-paper {
+    padding: 24px 18px;
+  }
+  .pdf-resume-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}

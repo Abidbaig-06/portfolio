@@ -1,0 +1,201 @@
+.skills-section {
+  position: relative;
+}
+
+.skills-filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filter-tab {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: all var(--transition-fast);
+}
+
+.filter-tab:hover {
+  background: #f8fafc;
+  color: var(--text-primary);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+.filter-tab-active {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.skills-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.skills-category-block {
+  padding: 28px 32px;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+}
+
+.category-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 22px;
+}
+
+.category-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.text-cyan { color: #0284c7; }
+.text-purple { color: #7c3aed; }
+.text-blue { color: #2563eb; }
+.text-amber { color: #d97706; }
+.text-emerald { color: #059669; }
+.text-indigo { color: #4f46e5; }
+
+.skill-count-chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  font-weight: 600;
+}
+
+.skills-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.category-desc-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.skill-tags-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: all var(--transition-fast);
+}
+
+.resume-skill-pill:hover {
+  background: #ffffff;
+  border-color: rgba(2, 132, 199, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.skill-pill-icon {
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.skill-pill-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.badge-intermediate {
+  background: rgba(217, 119, 6, 0.08);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.skill-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Bottom banner */
+.skills-banner {
+  margin-top: 40px;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.banner-sparkle {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.banner-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.banner-sub {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  max-width: 750px;
+}
+
+@media (max-width: 768px) {
+  .skills-category-block {
+    padding: 20px 18px;
+  }
+  .skills-items-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
